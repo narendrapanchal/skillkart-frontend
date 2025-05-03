@@ -92,7 +92,7 @@ function Discussions() {
       {/* Filters */}
       <div className="mb-4 flex justify-end items-center gap-4 flex-wrap">
         {/* Role Filter */}
-        {user.role === "learner" && (
+        {/* {user.role === "learner" && (
           <select
             value={filter}
             onChange={handleFilterChange}
@@ -101,7 +101,7 @@ function Discussions() {
             <option value="all">All Questions</option>
             <option value="my">My Questions</option>
           </select>
-        )}
+        )} */}
 
         {/* Skill Filter */}
         <select
