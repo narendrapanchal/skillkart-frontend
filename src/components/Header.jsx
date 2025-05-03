@@ -16,7 +16,7 @@ function Header() {
       </Link>
 
       <nav className="flex gap-6 items-center">
-      {user?.role === "learner" &&  <strong> Points Earned {user.xp}</strong> }
+      {user?.role === "learner" &&  <strong> {user.badges?.name && user.badges.name} {user.badges?.icon && user.badges?.icon} {user.xp}XP</strong> }
         {user?.role === "learner" && (
           <Link to="/ask-question" className="text-gray-700 hover:text-blue-600">
             Ask a Question
