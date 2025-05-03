@@ -37,6 +37,7 @@ function LearnerDashboard() {
       );
       setCompletedSteps(res.data.completedSteps);
       setUser({...user,...res.data});
+      window.location.reload();
     } catch (err) {
       console.error(err);
     }

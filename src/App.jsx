@@ -15,7 +15,6 @@ function App() {
     <Router>
       <Header/>
        <AuthProvider>
-   
         <Routes>
           <Route path="/" element={user?.role=="learner" && <LearnerDashboard />||user?.role=="admin" && <AdminDashboard/>||<Login />} />
           <Route path="/login" element={<Login />} />
@@ -24,7 +23,7 @@ function App() {
           <Route path="/discussion" element={((user?.role=="learner" || user?.role=="admin") && <Discussions/>) || <Login/>}  />
           <Route path="/discussion/:discussionId" element={((user?.role=="learner" || user?.role=="admin") && <DiscussionDetail/>) || <Login/>}  />
         </Routes>
-    </AuthProvider>
+       </AuthProvider>
       </Router>
   );
 }

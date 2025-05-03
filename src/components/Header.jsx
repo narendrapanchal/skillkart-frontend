@@ -23,9 +23,9 @@ function Header() {
           </Link>
         )}
 
-        <Link to="/discussion" className="text-gray-700 hover:text-blue-600">
+       {(user?.role === "learner"||user?.role === "admin") && <Link to="/discussion" className="text-gray-700 hover:text-blue-600">
           Public Threads
-        </Link>
+        </Link>}
 
         {user ? (
           <button
